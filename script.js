@@ -10,7 +10,7 @@ console.log("Sohail");
 let name = "Sohail Khan";
 let age = 20;
 
-console.log(name);
+console.log("My name is " + name);
 console.log(age);
 
 name = "Sohail";
@@ -23,8 +23,9 @@ console.log(age);
 // Lesson 3: const
 // const ki value ko hum change nahi kar sakte
 // =======================
-const city = "Bhiwandi";
-console.log(city);
+
+// const city = "Bhiwandi";
+// console.log(city);
 
 
 // Lesson 4: Data Type - String
@@ -56,3 +57,71 @@ let isAdult = false;
 console.log(isStudent);
 console.log(isAdult);
 
+// 🔹 typeof undefined aur null ka output
+// undefined ka type "undefined" hota hai
+console.log(typeof undefined);  // output: undefined
+
+// null ka type "object" aata hai (JS ka old bug)
+console.log(typeof null);       // output: object
+
+
+// 🔹 Variables + Data Types Practice
+// 🟢 Level 1 – Easy (Warm-up)
+
+// Q1: Basic variables declaration
+let fullName = "Sohail khan";   // string type
+let currentAge = 19;           // number type
+let isLogin = true;            // boolean type
+
+// console.table multiple values ko table format me print karta hai
+console.table([
+  "My full name is " + fullName,
+  "My current age is " + currentAge,
+  isLogin
+]);
+
+
+// Q2: Variable without value
+let city;                      // value assign nahi ki, isliye undefined
+console.log(city);             // output: undefined
+console.log(typeof city);      // output: undefined
+
+
+// Q3: null value
+let score = null;              // null ka matlab intentionally empty
+console.log(score);            // output: null
+console.log(typeof score);     // output: object (JS bug)
+
+
+// 🟡 Level 2 – Variables + Data Types
+
+// Q4: String vs Number
+let a = "10";                  // string
+let b = 10;                    // number
+
+console.log(a);                // output: 10
+console.log(b);                // output: 10
+console.log(typeof a);         // output: string
+console.log(typeof b);         // output: number
+
+
+// Q5: String to Number conversion
+let x = "10";                  // string value
+let num = Number(x);           // string → number conversion
+
+console.log(num);              // output: 10
+console.log(typeof num);       // output: number
+
+
+// Q6: Number to String conversion
+let y = 10;                    // number value
+let str = String(y);           // number → string conversion
+
+console.log(str);              // output: "10"
+console.log(typeof str);       // output: string
+
+
+// Q7: "true" as a string
+let isActive = "true";         // yeh boolean nahi, string hai
+console.log(isActive);         // output: true
+console.log(typeof isActive);  // output: string
