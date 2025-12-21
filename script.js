@@ -1,12 +1,12 @@
 // Lesson 1: console.log()
 // console.log ka use output dikhane ke liye hota hai
-// =======================
+
 console.log("Sohail");
 
 
 // Lesson 2: let
 // let ki value ko hum baad me change kar sakte hain
-// =======================
+
 let name = "Sohail Khan";
 let age = 20;
 
@@ -30,7 +30,7 @@ console.log(age);
 
 // Lesson 4: Data Type - String
 // String hamesha quotes me hoti hai "" ya ''
-// =======================
+
 let course = "JavaScript";
 console.log(course);
 
@@ -40,7 +40,7 @@ console.log(course);
 
 // Lesson 4: Data Type - Number
 // Number ka matlab hota hai digits
-// =======================
+
 let price = 99.5;
 console.log(price);
 
@@ -113,6 +113,7 @@ console.log(num);              // output: 10
 console.log(typeof num);       // output: number
 
 
+
 // Q6: Number to String conversion
 let y = 10;                    // number value
 let str = String(y);           // number → string conversion
@@ -125,3 +126,57 @@ console.log(typeof str);       // output: string
 let isActive = "true";         // yeh boolean nahi, string hai
 console.log(isActive);         // output: true
 console.log(typeof isActive);  // output: string
+
+
+//Data => conversion confusion
+let scores = undefined;
+let valueInNumber = Number(scores)
+
+console.log(typeof scores);
+console.log(typeof valueInNumber);
+console.log(valueInNumber);
+
+// "33" => 33 jab bhi ham ek string ko convert karte hai 
+// "33abc" => NaN 
+// true => 1; => false => 0;
+
+let isLoggedIn = ""
+let booleanIsLoggedIn = Boolean(isLoggedIn);
+
+console.log(booleanIsLoggedIn);
+
+// true => 1; => false => 0;
+// "" => false
+// "sohail" => true
+
+
+/*
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ |OPERATOR QUESTION'SSSS| ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+console.log("2" === 2); strict equal | output: false    === is me type bhi check hogi aur value bhi
+console.log("2" == 2);  equal        | output: true     == is me sirf value check hogi
+console.log("2" !== 2); not equal    | output: true 
+console.log("2" >= 2);               | output: true 
+console.log(null == 0);              | output: false
+console.log(null !== 0);             | output: true
+console.log(null == undefined);      | output: true
+console.log(undefined == 0);         | output: false
+
+let rait = 800;
+discount = rait * 25 / 100;
+
+console.log(discount)
+
+
+let count = 5;
+addCount = count + 2;
+
+console.log(addCount);
+
+
+let q = 10;
+let r = "10";
+
+console.log(q == r);
+console.log(q === r);
+*/
