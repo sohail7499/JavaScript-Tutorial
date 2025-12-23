@@ -10,14 +10,14 @@ console.log("Sohail");
 let name = "Sohail Khan";
 let age = 20;
 
-console.log("My name is " + name);
-console.log(age);
+console.log(`This is my full name ${name} and my age is ${age}`);
+
 
 name = "Sohail";
 age = 21;    // value change (let allow karta hai)
 
-console.log(name);
-console.log(age);
+console.log(`This is my full name ${name} and my age is ${age}`);
+
 
 
 // Lesson 3: const
@@ -180,3 +180,47 @@ let r = "10";
 console.log(q == r);
 console.log(q === r);
 */
+
+//STRING'S
+const gameName = "marvel";
+
+console.log(gameName.length);
+console.log(gameName.charAt(3));
+console.log(gameName.indexOf('v'));
+console.log(gameName.toUpperCase());
+
+
+//🔹combination operator  =, +, *, +=, *=
+
+let prices = 20;
+prices += 10;
+
+console.log(prices * 3);
+
+
+//🔹Comparison Operators = Compare Karna   >, <, >=, <=, ==, ===
+
+
+console.log(10 > 8);        //output: true
+console.log(5 <= 5 );       //output: true
+console.log(10 == "10");    //output: true
+console.log(10 === "10");   //output: false
+
+
+//NUMBERS---ye hamesha Output string me deta hai 
+// > 5 → upar badhao
+// < 5 → waise ka waise chhod do
+
+const runs = 200;
+console.log(runs);
+
+const balanse = new Number (100)
+console.log(balanse);
+console.log(balanse.toString().length);
+console.log(balanse.toFixed(2));
+
+let xx = 0.0456;
+console.log(xx.toPrecision(1));
+
+const zz = 1000000;
+console.log(zz.toLocaleString('en-IN'));
