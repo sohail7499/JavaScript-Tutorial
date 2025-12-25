@@ -184,10 +184,10 @@ console.log(q === r);
 //STRING'S
 const gameName = "marvel";
 
-console.log(gameName.length);
-console.log(gameName.charAt(3));
-console.log(gameName.indexOf('v'));
-console.log(gameName.toUpperCase());
+console.log(gameName.length);             //output: 6
+console.log(gameName.charAt(3));          //output: v
+console.log(gameName.indexOf('v'));       //output: 3
+console.log(gameName.toUpperCase());      //output: MARVEL
 
 
 //🔹combination operator  =, +, *, +=, *=
@@ -224,3 +224,86 @@ console.log(xx.toPrecision(1));
 
 const zz = 1000000;
 console.log(zz.toLocaleString('en-IN'));
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ MATH ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//Math.random ka formala-----Math.floor(Math.random() * (max - min + 1)) + min
+
+// console.log(Math.abs(-410));
+// console.log(Math.ceil(9.3));
+// console.log(Math.floor(10.9));
+// console.log(Math.round(10.5));
+// console.log(Math.min(1, 2, 3, 4, 5,));
+// console.log(Math.max(1, 2, 3, 4, 5,));
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++ Math.random()-----------QUESTIONS +++++++++++++++++++++++++++++++++++++++++++
+
+// 1️⃣ Math.random()
+// 0 se 1 ke beech random number deta hai (1 include nahi hota)
+console.log(Math.random());
+
+// 2️⃣ 0 se 10 ke beech random number (decimal)
+console.log(Math.random() * 10);
+
+
+// 3️⃣ 1 se 10 ke beech random number (decimal)
+console.log(Math.random() * 10 + 1);
+
+// 4️⃣ 0 se 3 ke beech random number (decimal)
+console.log(Math.random() * 4);
+
+// 5️⃣ 1 se 6 ke beech random INTEGER (dice example)
+console.log(Math.floor(Math.random() * 6) + 1);
+
+// 6️⃣ 5 se 15 ke beech random INTEGER
+let min = 5;
+let max = 15;
+
+console.log(
+  Math.floor(Math.random() * (max - min + 1)) + min);
+
+// 7️⃣ Sirf EVEN numbers (0, 2, 4, 6, 8)
+console.log(Math.floor(Math.random() * 10) * 2);
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++ ARRAY +++++++++++++++++++++++++++++++++++++++++++++++
+
+const arr = [0, 1, 2, 3, 4, 5];
+// arr.push(70)    //last me elemant add karta hai
+// arr.pop()       //last element remove karta hai
+// arr.unshift(-1) //start me element add karta hai 
+// arr.shift()     //start se element remove karta hai
+
+console.log( 'A', arr);
+
+//splice , slice
+
+const myn1 = arr.slice(1, 4);   // slice me orignal array me change nhi hota hai wo bass slice kar ke vlaue deta hai
+
+console.log(myn1);    //output: [1, 2, 3]
+console.log( 'B', arr);  //output: [ 0, 1, 2, 3, 4, 5] orignal array me kuch change nhi hota hai
+
+const myn2 = arr.splice(1, 4);  //splice agar ham kaete hai to array change hota hai 
+
+console.log( 'C', arr);   //output: [0 , 5]
+console.log(myn2);       //output: [1, 2, 3, 4]
+
+
+const newArr = ["Sohail Khan"]
+
+console.log(Array.isArray(newArr));
+console.log(Array.from("Sohail"));
+
+
+const marvel_heros = ["Thor", "Iron-Man", "Captain-America"]
+const dc_heros = ["Super-man", "Bat-man", "Flash"]
+console.log("A-", marvel_heros);
+console.log("B-", dc_heros);
+
+
+const all_heros = [...marvel_heros, ...dc_heros]
+
+console.log("C-", all_heros);
+
+let score1 = 100
+let score2 = 200
+let score3 = 300
+
+console.log(Array.of(score1, score2, score3));
