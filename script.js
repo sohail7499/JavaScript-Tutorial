@@ -275,12 +275,13 @@ console.log( 'A', arr);
 
 //splice , slice
 
-const myn1 = arr.slice(1, 4);   // slice me orignal array me change nhi hota hai wo bass slice kar ke vlaue deta hai
+const myn1 = arr.slice(1, 4);   // original array change nahi hota
 
 console.log(myn1);    //output: [1, 2, 3]
-console.log( 'B', arr);  //output: [ 0, 1, 2, 3, 4, 5] orignal array me kuch change nhi hota hai
 
-const myn2 = arr.splice(1, 4);  //splice agar ham kaete hai to array change hota hai 
+console.log( 'B', arr);  //output: [ 0, 1, 2, 3, 4, 5] original array me kuch change nhi hota hai
+
+const myn2 = arr.splice(1, 4);  //original array change hota hai 
 
 console.log( 'C', arr);   //output: [0 , 5]
 console.log(myn2);       //output: [1, 2, 3, 4]
