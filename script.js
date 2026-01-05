@@ -286,19 +286,60 @@ let score3 = 300;
 console.log(Array.of(score1, score2, score3));
 
 //++++++++++++++++++++++++++++++++++++++++++++++++ OBJECT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//🔸Object = key : value pairs
 
-let student = {
+let student_1 = {
   firstName: "sohail",
   lastName: "khan",
   city: "bhiwandi",
   age: 19,
 };
 
-student.age = 200; //value update
-student.course = "javascript"; //property add
+student_1.age = 200;                  //value update
+student_1.course = "javascript";      //property add
 
 //value kaise nikaale
-console.log(student["firstName"]); //Bracket Nation
-console.log(student.lastName); //most common: Dot Nation
+console.log(student_1["firstName"]);  //Bracket Nation
+console.log(student_1.lastName);      //most common: Dot Nation
 
-console.log(student);
+console.log(student_1);
+
+//🔸Part 1: Object ke ander object (nested object)
+
+let student_2 = {
+  fullName: 'Sohail Khan',
+  age: 19,
+  address: {
+    city: 'bhiwandi',
+    pincode: 421302
+  }
+};
+
+console.log(student_2);
+console.log(student_2.address.city);   //value access
+
+//🔸Part 2: Object ke ander array
+
+let student_3 = {
+  fullName: 'Sohail Khan',
+  age:19,
+  skilss: ["HTML", "CSS", "JS"]
+};
+
+console.log(student_3);
+console.log(student_3.skilss[2]);   //access array values
+
+
+//🔸Part 3: Mix Example
+let student_4 = {
+  name: 'Sohail',
+  age: 19,
+  address: {
+    state: 'MH',
+    city: 'bhiwandi',
+    pincode: 421302,
+  },
+  skils: ["HTML", "CSS", "JS"]
+};
+
+console.log(student_4);
