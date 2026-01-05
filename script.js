@@ -3,7 +3,6 @@
 
 console.log("Sohail");
 
-
 // Lesson 2: let
 // let ki value ko hum baad me change kar sakte hain
 
@@ -12,13 +11,10 @@ let age = 20;
 
 console.log(`This is my full name ${name} and my age is ${age}`);
 
-
 name = "Sohail";
-age = 21;    // value change (let allow karta hai)
+age = 21; // value change (let allow karta hai)
 
 console.log(`This is my full name ${name} and my age is ${age}`);
-
-
 
 // Lesson 3: const
 // const ki value ko hum change nahi kar sakte
@@ -26,7 +22,6 @@ console.log(`This is my full name ${name} and my age is ${age}`);
 
 // const city = "Bhiwandi";
 // console.log(city);
-
 
 // Lesson 4: Data Type - String
 // String hamesha quotes me hoti hai "" ya ''
@@ -48,7 +43,6 @@ console.log(price);
 price = 120;
 console.log(price);
 
-
 // Lesson 4: Data Type - Boolean
 // Boolean me sirf true ya false hota hai
 let isStudent = true;
@@ -59,88 +53,79 @@ console.log(isAdult);
 
 // 🔹 typeof undefined aur null ka output
 // undefined ka type "undefined" hota hai
-console.log(typeof undefined);  // output: undefined
+console.log(typeof undefined); // output: undefined
 
 // null ka type "object" aata hai (JS ka old bug)
-console.log(typeof null);       // output: object
-
+console.log(typeof null); // output: object
 
 // 🔹 Variables + Data Types Practice
 // 🟢 Level 1 – Easy (Warm-up)
 
 // Q1: Basic variables declaration
-let fullName = "Sohail khan";   // string type
-let currentAge = 19;           // number type
-let isLogin = true;            // boolean type
+let fullName = "Sohail khan"; // string type
+let currentAge = 19; // number type
+let isLogin = true; // boolean type
 
 // console.table multiple values ko table format me print karta hai
 console.table([
   "My full name is " + fullName,
   "My current age is " + currentAge,
-  isLogin
+  isLogin,
 ]);
 
-
 // Q2: Variable without value
-let city;                      // value assign nahi ki, isliye undefined
-console.log(city);             // output: undefined
-console.log(typeof city);      // output: undefined
-
+let city; // value assign nahi ki, isliye undefined
+console.log(city); // output: undefined
+console.log(typeof city); // output: undefined
 
 // Q3: null value
-let score = null;              // null ka matlab intentionally empty
-console.log(score);            // output: null
-console.log(typeof score);     // output: object (JS bug)
-
+let score = null; // null ka matlab intentionally empty
+console.log(score); // output: null
+console.log(typeof score); // output: object (JS bug)
 
 // 🟡 Level 2 – Variables + Data Types
 
 // Q4: String vs Number
-let a = "10";                  // string
-let b = 10;                    // number
+let a = "10"; // string
+let b = 10; // number
 
-console.log(a);                // output: 10
-console.log(b);                // output: 10
-console.log(typeof a);         // output: string
-console.log(typeof b);         // output: number
-
+console.log(a); // output: 10
+console.log(b); // output: 10
+console.log(typeof a); // output: string
+console.log(typeof b); // output: number
 
 // Q5: String to Number conversion
-let x = "10";                  // string value
-let num = Number(x);           // string → number conversion
+let x = "10"; // string value
+let num = Number(x); // string → number conversion
 
-console.log(num);              // output: 10
-console.log(typeof num);       // output: number
-
-
+console.log(num); // output: 10
+console.log(typeof num); // output: number
 
 // Q6: Number to String conversion
-let y = 10;                    // number value
-let str = String(y);           // number → string conversion
+let y = 10; // number value
+let str = String(y); // number → string conversion
 
-console.log(str);              // output: "10"
-console.log(typeof str);       // output: string
-
+console.log(str); // output: "10"
+console.log(typeof str); // output: string
 
 // Q7: "true" as a string
-let isActive = "true";         // yeh boolean nahi, string hai
-console.log(isActive);         // output: true
-console.log(typeof isActive);  // output: string
-
+let isActive = "true"; // yeh boolean nahi, string hai
+console.log(isActive); // output: true
+console.log(typeof isActive); // output: string
 
 //Data => conversion confusion
 let scores = undefined;
-let valueInNumber = Number(scores)
+let valueInNumber = Number(scores);
 
 console.log(typeof scores);
 console.log(typeof valueInNumber);
 console.log(valueInNumber);
 
-// "33" => 33 jab bhi ham ek string ko convert karte hai 
-// "33abc" => NaN 
+// "33" => 33 jab bhi ham ek string ko convert karte hai
+// "33abc" => NaN
 // true => 1; => false => 0;
 
-let isLoggedIn = ""
+let isLoggedIn = "";
 let booleanIsLoggedIn = Boolean(isLoggedIn);
 
 console.log(booleanIsLoggedIn);
@@ -148,7 +133,6 @@ console.log(booleanIsLoggedIn);
 // true => 1; => false => 0;
 // "" => false
 // "sohail" => true
-
 
 /*
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ |OPERATOR QUESTION'SSSS| ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -184,11 +168,10 @@ console.log(q === r);
 //STRING'S
 const gameName = "marvel";
 
-console.log(gameName.length);             //output: 6
-console.log(gameName.charAt(3));          //output: v
-console.log(gameName.indexOf('v'));       //output: 3
-console.log(gameName.toUpperCase());      //output: MARVEL
-
+console.log(gameName.length); //output: 6
+console.log(gameName.charAt(3)); //output: v
+console.log(gameName.indexOf("v")); //output: 3
+console.log(gameName.toUpperCase()); //output: MARVEL
 
 //🔹combination operator  =, +, *, +=, *=
 
@@ -197,34 +180,32 @@ prices += 10;
 
 console.log(prices * 3);
 
-
 //🔹Comparison Operators = Compare Karna   >, <, >=, <=, ==, ===
 
+console.log(10 > 8); //output: true
+console.log(5 <= 5); //output: true
+console.log(10 == "10"); //output: true
+console.log(10 === "10"); //output: false
 
-console.log(10 > 8);        //output: true
-console.log(5 <= 5 );       //output: true
-console.log(10 == "10");    //output: true
-console.log(10 === "10");   //output: false
-
-
-//NUMBERS---ye hamesha Output string me deta hai 
+//NUMBERS---ye hamesha Output string me deta hai
 // > 5 → upar badhao
 // < 5 → waise ka waise chhod do
 
 const runs = 200;
 console.log(runs);
 
-const balanse = new Number (100)
+const balanse = new Number(100);
 console.log(balanse);
 console.log(balanse.toString().length);
-console.log(balanse.toFixed(2));
+console.log(balanse.toFixed(2)); //  100:00
 
 let xx = 0.0456;
 console.log(xx.toPrecision(1));
 
 const zz = 1000000;
-console.log(zz.toLocaleString('en-IN'));
+console.log(zz.toLocaleString("en-IN"));
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ MATH ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 //Math.random ka formala-----Math.floor(Math.random() * (max - min + 1)) + min
 
 // console.log(Math.abs(-410));
@@ -243,7 +224,6 @@ console.log(Math.random());
 // 2️⃣ 0 se 10 ke beech random number (decimal)
 console.log(Math.random() * 10);
 
-
 // 3️⃣ 1 se 10 ke beech random number (decimal)
 console.log(Math.random() * 10 + 1);
 
@@ -257,8 +237,7 @@ console.log(Math.floor(Math.random() * 6) + 1);
 let min = 5;
 let max = 15;
 
-console.log(
-  Math.floor(Math.random() * (max - min + 1)) + min);
+console.log(Math.floor(Math.random() * (max - min + 1)) + min);
 
 // 7️⃣ Sirf EVEN numbers (0, 2, 4, 6, 8)
 console.log(Math.floor(Math.random() * 10) * 2);
@@ -268,43 +247,58 @@ console.log(Math.floor(Math.random() * 10) * 2);
 const arr = [0, 1, 2, 3, 4, 5];
 // arr.push(70)    //last me elemant add karta hai
 // arr.pop()       //last element remove karta hai
-// arr.unshift(-1) //start me element add karta hai 
+// arr.unshift(-1) //start me element add karta hai
 // arr.shift()     //start se element remove karta hai
 
-console.log( 'A', arr);
+console.log("A", arr);
 
 //splice , slice
 
-const myn1 = arr.slice(1, 4);   // original array change nahi hota
+const myn1 = arr.slice(1, 4); // original array change nahi hota
 
-console.log(myn1);    //output: [1, 2, 3]
+console.log(myn1); //output: [1, 2, 3]
 
-console.log( 'B', arr);  //output: [ 0, 1, 2, 3, 4, 5] original array me kuch change nhi hota hai
+console.log("B", arr); //output: [ 0, 1, 2, 3, 4, 5] original array me kuch change nhi hota hai
 
-const myn2 = arr.splice(1, 4);  //original array change hota hai 
+const myn2 = arr.splice(1, 4); //original array change hota hai
 
-console.log( 'C', arr);   //output: [0 , 5]
-console.log(myn2);       //output: [1, 2, 3, 4]
+console.log("C", arr); //output: [0 , 5]
+console.log(myn2); //output: [1, 2, 3, 4]
 
-
-const newArr = ["Sohail Khan"]
+const newArr = ["Sohail Khan"];
 
 console.log(Array.isArray(newArr));
 console.log(Array.from("Sohail"));
 
-
-const marvel_heros = ["Thor", "Iron-Man", "Captain-America"]
-const dc_heros = ["Super-man", "Bat-man", "Flash"]
+const marvel_heros = ["Thor", "Iron-Man", "Captain-America"];
+const dc_heros = ["Super-man", "Bat-man", "Flash"];
 console.log("A-", marvel_heros);
 console.log("B-", dc_heros);
 
-
-const all_heros = [...marvel_heros, ...dc_heros]
+const all_heros = [...marvel_heros, ...dc_heros];
 
 console.log("C-", all_heros);
 
-let score1 = 100
-let score2 = 200
-let score3 = 300
+let score1 = 100;
+let score2 = 200;
+let score3 = 300;
 
 console.log(Array.of(score1, score2, score3));
+
+//++++++++++++++++++++++++++++++++++++++++++++++++ OBJECT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+let student = {
+  firstName: "sohail",
+  lastName: "khan",
+  city: "bhiwandi",
+  age: 19,
+};
+
+student.age = 200; //value update
+student.course = "javascript"; //property add
+
+//value kaise nikaale
+console.log(student["firstName"]); //Bracket Nation
+console.log(student.lastName); //most common: Dot Nation
+
+console.log(student);
