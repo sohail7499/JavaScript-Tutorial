@@ -356,3 +356,29 @@ function sayHello() {
   console.log("Hello Javascript");
 }
 sayHello()
+
+//🔹Parameters & Arguments
+
+function great(name){
+  console.log("Hello " + name);
+
+}
+
+great("Sohail");
+great("sahil");
+
+function calulatePrice(price, tax) {
+  console.log(price + tax);
+
+}
+
+calulatePrice(999, 18)
+
+//🔹 return keyword
+
+function calulateTotal(price, tax){
+  return price * tax
+}
+
+let total = calulateTotal(799 , 18)
+console.log(`Total Price ${total}`);
