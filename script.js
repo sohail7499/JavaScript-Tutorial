@@ -286,6 +286,10 @@ let score3 = 300;
 console.log(Array.of(score1, score2, score3));
 
 //++++++++++++++++++++++++++++++++++++++++++++++++ OBJECT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//Update → object.key = value
+// Add    → object.newKey = value
+// Delete → delete object.key
+
 //🔸Object = key : value pairs
 
 let student_1 = {
@@ -293,10 +297,12 @@ let student_1 = {
   lastName: "khan",
   city: "bhiwandi",
   age: 19,
+  marks: 55
 };
 
 student_1.age = 200;                  //value update
 student_1.course = "javascript";      //property add
+delete student_1.marks;               //property delete
 
 //value kaise nikaale
 console.log(student_1["firstName"]);  //Bracket Nation
@@ -343,3 +349,10 @@ let student_4 = {
 };
 
 console.log(student_4);
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++ FUNCTIONS++++++++++++++++++++++++++++++
+
+function sayHello() {
+  console.log("Hello Javascript");
+}
+sayHello()
