@@ -402,3 +402,20 @@ function returnArrayValue(getArray){
   return getArray[2]
 }
 console.log(returnArrayValue(myNewArray));
+
+//Arrow function
+const add =  () => {
+  let username = "Sohail"
+  console.log(this.username);
+  
+}
+add()
+
+// // const addtwo = (num1, num2) => {          //ham ise aise bhi likh sakte hai
+// //   return num1 * num2
+// }
+
+// const addtwo = (num1, num2) => num1 + num2   //aur aise bhi
+const addtwo = (num1, num2) => (num1 + num2)    // react me aisa tarika zyada use hota hai 
+
+console.log(addtwo(10, 19));
