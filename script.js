@@ -382,3 +382,23 @@ function calulateTotal(price, tax){
 
 let total = calulateTotal(799 , 18)
 console.log(`Total Price ${total}`);
+
+//function me object pass karna (basic)
+let user = {
+  username: "Sohail",
+  age: 20
+}
+
+function handleObject(anyobject) {
+  console.log(`username is ${anyobject.username} and age is ${anyobject.age}`);
+  
+}
+handleObject(user)
+
+//function me array pass karna (basic)
+const myNewArray = [100, 200, 300, 400]
+
+function returnArrayValue(getArray){
+  return getArray[2]
+}
+console.log(returnArrayValue(myNewArray));
