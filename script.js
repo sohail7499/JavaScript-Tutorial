@@ -419,3 +419,16 @@ add()
 const addtwo = (num1, num2) => (num1 + num2)    // react me aisa tarika zyada use hota hai 
 
 console.log(addtwo(10, 19));
+
+
+//Immediately Invoked Function Expression (IIFE Function's)
+(function chaiCode (){
+  console.log(`DB conneted`);
+  
+}) ();
+
+//Arrow IIFE function
+((name) => {
+  console.log(`DB conneted two ${name}`);
+  
+}) ('sohail');~
