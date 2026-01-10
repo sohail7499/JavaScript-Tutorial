@@ -433,7 +433,7 @@ console.log(addtwo(10, 19));
   
 }) ('sohail');
 
-//Control's 
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Control's +++++++++++++++++++++++++++++++++++++++++++++++++ 
 
 const temperature = 29
 if (temperature >= 30) {
@@ -459,7 +459,7 @@ if (marks >= 90) {
   
 }
 
-//Switch
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Switch +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 let month = 4
 
 switch (month) {
@@ -484,4 +484,34 @@ switch (month) {
     console.log(`default month's`);
     
     break;
+}
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++ Falsy Value & Thruthy Value ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+/*                                                           falsy value 
+                                              0 , -0, BigInt 0n, "", null, undifined, NaN
+
+=========================================================================================================================================
+
+                                                             thruthy values
+                                              "0", "false", " ", [], {}, function(){}
+*/
+
+let userEmail = ""
+if (userEmail) {
+  console.log('Got user Email');
+  
+} else {
+  console.log("Don't have user Email");
+}
+
+if (userEmail.length === 0) {
+  console.log("Email is emty");
+  
+}
+
+
+if (Object.keys(emtyObj).length === 0) {
+  console.log("Object is emty");
+  
 }
