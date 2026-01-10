@@ -431,4 +431,57 @@ console.log(addtwo(10, 19));
 ((name) => {
   console.log(`DB conneted two ${name}`);
   
-}) ('sohail');~
+}) ('sohail');
+
+//Control's 
+
+const temperature = 29
+if (temperature >= 30) {
+  console.log(`temperature is less than 41`);
+  
+} else{
+  console.log(`temperature is greater than 41`);
+  
+}
+
+const marks = 34.9
+if (marks >= 90) {
+  console.log(`A: Grade`);
+  
+} else if (marks >= 60) {
+  console.log(`B: Grade`);  
+
+} else if (marks >= 35) {
+  console.log(`C: Grade`);
+  
+}else {
+  console.log(`Fail`);
+  
+}
+
+//Switch
+let month = 4
+
+switch (month) {
+  case 1:
+    console.log(`jenu`);
+    
+    break;
+  case 2:
+    console.log(`feb`);
+    
+    break;
+  case 3:
+    console.log(`march`);
+    
+    break;
+  case 4:
+    console.log(`april`);
+    
+    break;
+
+  default:
+    console.log(`default month's`);
+    
+    break;
+}
