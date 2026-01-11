@@ -544,3 +544,19 @@ for (let i = 0; i <= 15; i++) {
   }
   console.log(`value of i ${i}`);
 }
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Do While loop +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+let i = 1
+while (i <= 10) {
+  console.log(`js ${i}`);
+  i++  // i = i + 1   
+}
+
+// Do-while loop
+let j = 0
+
+do {
+  console.log(`score is ${j}`);
+  j = j + 2
+} while (j <= 15);
