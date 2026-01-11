@@ -511,7 +511,36 @@ if (userEmail.length === 0) {
 }
 
 
-if (Object.keys(emtyObj).length === 0) {
-  console.log("Object is emty");
+// if (Object.keys(emtyObj).length === 0) {
+//   console.log("Object is emty");
   
+// }
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Loop's +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+for (let i = 0; i <= 15; i++) {
+  const elemant = i
+  console.log(elemant);
+  
+}
+
+//+++++++++++++++++++++++ break & continue +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+for (let i = 0; i <= 15; i++) {
+  
+  if (i == 5) {
+    console.log(`detected 5`);
+    break
+  }
+  console.log(`value of i ${i}`);
+}
+
+//continue
+for (let i = 0; i <= 15; i++) {
+  
+  if (i == 5) {
+    console.log(`detected 5`);
+    continue
+  }
+  console.log(`value of i ${i}`);
 }
