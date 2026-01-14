@@ -591,3 +591,42 @@ for (const key in myObj) {
  console.log(`${key} -> ${myObj[key]}`);
  
 }
+
+/*forEach
+🔹forEach sirf array par chalta hai
+🔹forEach loop nahi, method hai
+🔹Ye value return nahi karta
+
+1️⃣ value → current element
+2️⃣ index → position
+3️⃣ array → poora array
+*/
+
+let fruits = ['apple', 'banana', 'mango', 'orange'];
+
+fruits.forEach( (value, index) => {
+  console.log((index + 1)+ ". " + value + " ✓");
+  
+})
+
+// filter
+const num5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const newNum = num5.filter( (num) => {
+  return num > 4
+})
+console.log(newNum);
+
+const num6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const newNum1 = num6.filter( (num) => (num > 4))
+console.log(newNum1);
+
+//aur agar hame forEach se return karvana hai to
+
+const num7 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const newNum2 = []
+num7.forEach ( (num) => {
+  if (num > 4) {
+    newNum2.push(num)
+  }
+})
+console.log(newNum2);
