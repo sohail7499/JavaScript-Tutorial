@@ -554,9 +554,40 @@ while (i <= 10) {
 }
 
 // Do-while loop
-let j = 0
 
+let score4 = 1
 do {
-  console.log(`score is ${j}`);
-  j = j + 2
-} while (j <= 15);
+  console.log(`Score is ${score4}`);
+  score4++
+} while (score4 <= 15);
+
+//for-of loop
+const arrr = [1, 2, 3, 4, 5]
+
+for (const num of arrr) {
+  console.log(num);
+  
+}
+
+const greating = "Hello world!"
+for (const great of greating) {
+  if (great == " ") {
+    console.log(" ");
+    continue
+  }
+
+  console.log(`Each chart ${great}`);
+  
+}
+
+
+//for-in loop
+const myObj = {
+  js: 'javascript',
+  cpp: 'c++',
+  rb: 'ruby'
+}
+for (const key in myObj) {
+ console.log(`${key} -> ${myObj[key]}`);
+ 
+}
