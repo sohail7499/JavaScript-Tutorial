@@ -572,7 +572,7 @@ for (const num of arrr) {
 const greating = "Hello world!"
 for (const great of greating) {
   if (great == " ") {
-    console.log(" ");
+    // console.log(" ");
     continue
   }
 
@@ -630,3 +630,19 @@ num7.forEach ( (num) => {
   }
 })
 console.log(newNum2);
+
+//Map's
+
+const mynums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const newnums = mynums.map( (num) => num + 10 )
+console.log(newnums);
+
+
+const mynum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const newnum = mynum
+.map( (num) => num * 10)
+.map( (num) => num + 1)
+.filter( (num) => num >= 40 )
+console.log(newnum);
