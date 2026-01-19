@@ -30,7 +30,18 @@
         // console.log(children);
         // console.log(children.nextElementSibling);
 
-        
-        
+        //====================================================================================
+        const h1 = document.createElement('h1')
+        console.log(h1);
+        h1.id = "heading"
+        h1.className = "mainHeadin"
+        h1.style.backgroundColor = "orange"
+        h1.style.padding = "12px"
+        h1.style.paddingLeft = "500px"
+
+        const addHeading = document.createTextNode("JavaScript basic")
+        h1.appendChild(addHeading)
+
+        document.body.appendChild(h1)
     </script>
 </html>
