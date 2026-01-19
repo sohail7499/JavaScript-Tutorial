@@ -642,7 +642,7 @@ console.log(newnums);
 const mynum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 const newnum = mynum
-.map( (num) => num * 10)
-.map( (num) => num + 1)
-.filter( (num) => num >= 40 )
+.map( (num) => num * 10)        //pahle 10 se multiply hoga
+.map( (num) => num + 1)         //fir os value's me 1+ hoga 
+.filter( (num) => num >= 40 )   //fir 40 se bade number print hoge
 console.log(newnum);

@@ -5,15 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JAVASCRIPT-TUTORIAL</title>
 </head>
-<body>
-    <h1 style="text-align: center; color: blue; text-decoration: underline blue;">
-        JAVASCRIPT-TUTORIAL
-    </h1>
+<body style="background-color: #111111; color: white;">
+   <div class="parent">
+    <div class="day">Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">Wadnesday</div>
+    <div class="day">Thursday</div>
+   </div>
 
-    <script>
-        console.log('Ye Internal Javascript hai.');
-    </script>
-
-    <script src="script.js"></script>
 </body>
+    <script>
+        const parent = document.querySelector('.parent')
+        console.log(parent);
+        // console.log(parent.children);
+        // console.log(parent.children[0]);
+
+        parent.children[2].style.color = "green"
+        
+        for (let i = 0; i < parent.children.length; i++) {
+           console.log(parent.children[i].innerHTML);
+        }
+
+        const children = document.querySelector('.day')
+        // console.log(children);
+        // console.log(children.nextElementSibling);
+
+        
+        
+    </script>
 </html>
