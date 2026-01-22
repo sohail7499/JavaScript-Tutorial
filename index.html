@@ -1,47 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JAVASCRIPT-TUTORIAL</title>
-</head>
-<body style="background-color: #111111; color: white;">
-   <div class="parent">
-    <div class="day">Monday</div>
-    <div class="day">Tuesday</div>
-    <div class="day">Wadnesday</div>
-    <div class="day">Thursday</div>
-   </div>
+  </head>
+  <body style="background-color: #111111; color: white">
+    <div class="parent">
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wadnesday</div>
+      <div class="day">Thursday</div>
+    </div>
 
-</body>
-    <script>
-        const parent = document.querySelector('.parent')
-        console.log(parent);
-        // console.log(parent.children);
-        // console.log(parent.children[0]);
+    <ul class="language">
+      <li>JavaScript</li>
+    </ul>
+  </body>
+  <script>
+    const parent = document.querySelector(".parent");
+    console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[0]);
 
-        parent.children[2].style.color = "green"
-        
-        for (let i = 0; i < parent.children.length; i++) {
-           console.log(parent.children[i].innerHTML);
-        }
+    parent.children[2].style.color = "green";
 
-        const children = document.querySelector('.day')
-        // console.log(children);
-        // console.log(children.nextElementSibling);
+    for (let i = 0; i < parent.children.length; i++) {
+      console.log(parent.children[i].innerHTML);
+    }
 
-        //====================================================================================
-        const h1 = document.createElement('h1')
-        console.log(h1);
-        h1.id = "heading"
-        h1.className = "mainHeadin"
-        h1.style.backgroundColor = "orange"
-        h1.style.padding = "12px"
-        h1.style.paddingLeft = "500px"
+    const children = document.querySelector(".day");
+    // console.log(children);
+    // console.log(children.nextElementSibling);
 
-        const addHeading = document.createTextNode("JavaScript basic")
-        h1.appendChild(addHeading)
+    /*========================================== add content whit js ===========================================*/
 
-        document.body.appendChild(h1)
-    </script>
+    const h1 = document.createElement("h1");
+    console.log(h1);
+    h1.id = "heading";
+    h1.className = "mainHeadin";
+    h1.style.backgroundColor = "orange";
+    h1.style.padding = "12px";
+    h1.style.paddingLeft = "500px";
+
+    const addHeading = document.createTextNode("JavaScript basic");
+    h1.appendChild(addHeading);
+
+    document.body.appendChild(h1);
+
+    // EDIT AND ADD Element
+
+    function addLanguage(langName) {
+        const li = document.createElement("li")
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').
+        appendChild(li)
+    }
+    addLanguage('python')
+    addLanguage('react')
+  </script>
 </html>
