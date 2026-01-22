@@ -69,9 +69,16 @@
     addOptiLanguage('Node.js')
 
     //Edit 
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li>Tailwind</li>'
+
     const secondlang = document.querySelector('li:nth-child(2)')
-    console.log(secondlang);
     secondlang.innerHTML = 'HTML'
-    
+
+
+
+    //remove
+    const lastLang = document.querySelector('li:nth-child(2)')
+    // lastLang.remove()
   </script>
 </html>
