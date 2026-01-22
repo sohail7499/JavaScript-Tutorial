@@ -58,5 +58,14 @@
     }
     addLanguage('python')
     addLanguage('react')
+
+    function addOptiLanguage(optyLangName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(optyLangName))
+        document.querySelector('.language').
+        appendChild(li)
+    }
+    addOptiLanguage('typescript')
+    addOptiLanguage('Node.js')
   </script>
 </html>
