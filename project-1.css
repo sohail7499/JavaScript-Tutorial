@@ -1,0 +1,48 @@
+body {
+  margin: 0px;
+}
+
+span {
+  display: block;
+}
+
+.topheading {
+    text-align: center;
+}
+
+.main-content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contaner {
+  display: grid;
+  grid-template-columns: repeat(2, 100px); /* 2 columns */
+  gap: 10px; /* boxes ke beech gap */
+  margin-bottom: 100px;
+}
+
+.button {
+  height: 100px;
+  width: 100px;
+  border: 3px solid black;
+  display: inline-block;
+}
+
+#grey {
+  background: gray;
+}
+
+#red {
+  background: red;
+}
+
+#blue {
+  background: blue;
+}
+
+#yellow {
+  background: yellow;
+}

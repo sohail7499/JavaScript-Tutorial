@@ -433,7 +433,7 @@ console.log(addtwo(10, 19));
   
 }) ('sohail');
 
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Control's +++++++++++++++++++++++++++++++++++++++++++++++++ 
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Control's flow +++++++++++++++++++++++++++++++++++++++++++++++++ 
 
 const temperature = 29
 if (temperature >= 30) {
@@ -646,3 +646,12 @@ const newnum = mynum
 .map( (num) => num + 1)         //fir os value's me 1+ hoga 
 .filter( (num) => num >= 40 )   //fir 40 se bade number print hoge
 console.log(newnum);
+
+switch (key) {
+  case value:
+    
+    break;
+
+  default:
+    break;
+}
