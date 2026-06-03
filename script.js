@@ -619,9 +619,8 @@ const books = [
   { title: "Book Nine", genre: "Non-Fiction", publish: 1981, edition: 1989 },
 ];
 
-let userBooks = books.filter((bk) => bk.genre === 'History');
+let userBooks = books.filter((bk) => bk.genre === "History");
 console.log(userBooks);
-
 
 //aur agar hame forEach se return karvana hai to
 
@@ -663,3 +662,14 @@ for (const key of map) {
 for (const [key, value] of map) {
   console.log(key, ":-", value);
 }
+
+//reduce method
+const myNums = [1, 2, 3, 4, 5];
+
+// const myTotal = myNums.reduce(function (acc, currVal) {
+//   return acc + currVal;
+// });
+
+const myTotal = myNums.reduce((acc, currVal) => acc + currVal);
+
+console.log(myTotal);
