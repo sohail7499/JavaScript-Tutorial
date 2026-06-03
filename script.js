@@ -297,55 +297,54 @@ let student_1 = {
   lastName: "khan",
   city: "bhiwandi",
   age: 19,
-  marks: 55
+  marks: 55,
 };
 
-student_1.age = 200;                  //value update
-student_1.course = "javascript";      //property add
-delete student_1.marks;               //property delete
+student_1.age = 200; //value update
+student_1.course = "javascript"; //property add
+delete student_1.marks; //property delete
 
 //value kaise nikaale
-console.log(student_1["firstName"]);  //Bracket Nation
-console.log(student_1.lastName);      //most common: Dot Nation
+console.log(student_1["firstName"]); //Bracket Nation
+console.log(student_1.lastName); //most common: Dot Nation
 
 console.log(student_1);
 
 //🔸Part 1: Object ke ander object (nested object)
 
 let student_2 = {
-  fullName: 'Sohail Khan',
+  fullName: "Sohail Khan",
   age: 19,
   address: {
-    city: 'bhiwandi',
-    pincode: 421302
-  }
+    city: "bhiwandi",
+    pincode: 421302,
+  },
 };
 
 console.log(student_2);
-console.log(student_2.address.city);   //value access
+console.log(student_2.address.city); //value access
 
 //🔸Part 2: Object ke ander array
 
 let student_3 = {
-  fullName: 'Sohail Khan',
-  age:19,
-  skilss: ["HTML", "CSS", "JS"]
+  fullName: "Sohail Khan",
+  age: 19,
+  skilss: ["HTML", "CSS", "JS"],
 };
 
 console.log(student_3);
-console.log(student_3.skilss[2]);   //access array values
-
+console.log(student_3.skilss[2]); //access array values
 
 //🔸Part 3: Mix Example
 let student_4 = {
-  name: 'Sohail',
+  name: "Sohail",
   age: 19,
   address: {
-    state: 'MH',
-    city: 'bhiwandi',
+    state: "MH",
+    city: "bhiwandi",
     pincode: 421302,
   },
-  skils: ["HTML", "CSS", "JS"]
+  skils: ["HTML", "CSS", "JS"],
 };
 
 console.log(student_4);
@@ -355,13 +354,12 @@ console.log(student_4);
 function sayHello() {
   console.log("Hello Javascript");
 }
-sayHello()
+sayHello();
 
 //🔹Parameters & Arguments
 
-function great(name){
+function great(name) {
   console.log("Hello " + name);
-
 }
 
 great("Sohail");
@@ -369,127 +367,116 @@ great("sahil");
 
 function calulatePrice(price, tax) {
   console.log(price + tax);
-
 }
 
-calulatePrice(999, 18)
+calulatePrice(999, 18);
 
 //🔹 return keyword
 
-function calulateTotal(price, tax){
-  return price * tax
+function calulateTotal(price, tax) {
+  return price * tax;
 }
 
-let total = calulateTotal(799 , 18)
+let total = calulateTotal(799, 18);
 console.log(`Total Price ${total}`);
 
 //function me object pass karna (basic)
 let user = {
   username: "Sohail",
-  age: 20
-}
+  age: 20,
+};
 
 function handleObject(anyobject) {
   console.log(`username is ${anyobject.username} and age is ${anyobject.age}`);
-  
 }
-handleObject(user)
+handleObject(user);
 
 //function me array pass karna (basic)
-const myNewArray = [100, 200, 300, 400]
+const myNewArray = [100, 200, 300, 400];
 
-function returnArrayValue(getArray){
-  return getArray[2]
+function returnArrayValue(getArray) {
+  return getArray[2];
 }
 console.log(returnArrayValue(myNewArray));
 
 //Arrow function
-const add =  () => {
-  let username = "Sohail"
+const add = () => {
+  let username = "Sohail";
   console.log(this.username);
-  
-}
-add()
+};
+add();
 
 // // const addtwo = (num1, num2) => {          //ham ise aise bhi likh sakte hai
+// (agar hamne curly braces laga diye to hame return keyWord likha padega)
 // //   return num1 * num2
 // }
 
 // const addtwo = (num1, num2) => num1 + num2   //aur aise bhi
-const addtwo = (num1, num2) => (num1 + num2)    // react me aisa tarika zyada use hota hai 
+const addtwo = (num1, num2) => num1 + num2; // react me aisa tarika zyada use hota hai
 
 console.log(addtwo(10, 19));
 
-
 //Immediately Invoked Function Expression (IIFE Function's)
-(function chaiCode (){
+(function chaiCode() {
   console.log(`DB conneted`);
-  
-}) ();
+})();
 
 //Arrow IIFE function
 ((name) => {
   console.log(`DB conneted two ${name}`);
-  
-}) ('sohail');
+})("sohail");
 
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Control's flow +++++++++++++++++++++++++++++++++++++++++++++++++ 
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Control's flow +++++++++++++++++++++++++++++++++++++++++++++++++
 
-const temperature = 29
+const temperature = 29;
 if (temperature >= 30) {
   console.log(`temperature is less than 41`);
-  
-} else{
+} else {
   console.log(`temperature is greater than 41`);
-  
 }
 
-const marks = 34.9
+const marks = 34.9;
 if (marks >= 90) {
   console.log(`A: Grade`);
-  
 } else if (marks >= 60) {
-  console.log(`B: Grade`);  
-
+  console.log(`B: Grade`);
 } else if (marks >= 35) {
   console.log(`C: Grade`);
-  
-}else {
+} else {
   console.log(`Fail`);
-  
 }
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Switch +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-let month = 4
+let month = 4;
 
 switch (month) {
   case 1:
     console.log(`jenu`);
-    
+
     break;
   case 2:
     console.log(`feb`);
-    
+
     break;
   case 3:
     console.log(`march`);
-    
+
     break;
   case 4:
     console.log(`april`);
-    
+
     break;
 
   default:
     console.log(`default month's`);
-    
+
     break;
 }
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++ Falsy Value & Thruthy Value ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 /*                                                           falsy value 
-                                              0 , -0, BigInt 0n, "", null, undifined, NaN
+                                             false   0 , -0, BigInt 0n, "", null, undifined, NaN
 
 =========================================================================================================================================
 
@@ -497,99 +484,89 @@ switch (month) {
                                               "0", "false", " ", [], {}, function(){}
 */
 
-let userEmail = ""
+let userEmail = "";
 if (userEmail) {
-  console.log('Got user Email');
-  
+  console.log("Got user Email");
 } else {
   console.log("Don't have user Email");
 }
 
 if (userEmail.length === 0) {
   console.log("Email is emty");
-  
 }
-
 
 // if (Object.keys(emtyObj).length === 0) {
 //   console.log("Object is emty");
-  
+
 // }
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Loop's +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 for (let i = 0; i <= 15; i++) {
-  const elemant = i
+  const elemant = i;
   console.log(elemant);
-  
 }
 
 //+++++++++++++++++++++++ break & continue +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 for (let i = 0; i <= 15; i++) {
-  
   if (i == 5) {
     console.log(`detected 5`);
-    break
+    break;
   }
   console.log(`value of i ${i}`);
 }
 
 //continue
 for (let i = 0; i <= 15; i++) {
-  
   if (i == 5) {
     console.log(`detected 5`);
-    continue
+    continue;
   }
   console.log(`value of i ${i}`);
 }
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Do While loop +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- 
-let i = 1
+
+let i = 1;
 while (i <= 10) {
   console.log(`js ${i}`);
-  i++  // i = i + 1   
+  i++; // i = i + 1
 }
 
 // Do-while loop
 
-let score4 = 1
+let score4 = 1;
 do {
   console.log(`Score is ${score4}`);
-  score4++
+  score4++;
 } while (score4 <= 15);
 
 //for-of loop
-const arrr = [1, 2, 3, 4, 5]
+const arrr = [1, 2, 3, 4, 5];
 
 for (const num of arrr) {
   console.log(num);
-  
 }
 
-const greating = "Hello world!"
+const greating = "Hello world!";
 for (const great of greating) {
   if (great == " ") {
     // console.log(" ");
-    continue
+    continue;
   }
 
   console.log(`Each chart ${great}`);
-  
 }
-
 
 //for-in loop
 const myObj = {
-  js: 'javascript',
-  cpp: 'c++',
-  rb: 'ruby'
-}
+  js: "javascript",
+  cpp: "c++",
+  rb: "ruby",
+};
 for (const key in myObj) {
- console.log(`${key} -> ${myObj[key]}`);
- 
+  console.log(`${key} -> ${myObj[key]}`);
 }
 
 /*forEach
@@ -602,56 +579,87 @@ for (const key in myObj) {
 3️⃣ array → poora array
 */
 
-let fruits = ['apple', 'banana', 'mango', 'orange'];
+let fruits = ["apple", "banana", "mango", "orange"];
 
-fruits.forEach( (value, index) => {
-  console.log((index + 1)+ ". " + value + " ✓");
-  
-})
+fruits.forEach((value, index, arr) => {
+  console.log(index + 1 + ". " + value + " ✓", arr);
+});
+
+const myCoding = [
+  { languageName: "javascript", languageFileName: "JS" },
+  { languageName: "java", languageFileName: "Java" },
+  { languageName: "paython", languageFileName: "PY" },
+];
+
+myCoding.forEach((item) => {
+  console.log(item.languageName);
+});
 
 // filter
-const num5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-const newNum = num5.filter( (num) => {
-  return num > 4
-})
+const num5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const newNum = num5.filter((num) => {
+  return num > 4;
+});
 console.log(newNum);
 
-const num6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-const newNum1 = num6.filter( (num) => (num > 4))
+const num6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const newNum1 = num6.filter((num) => num > 4);
 console.log(newNum1);
+
+//filer example ->
+const books = [
+  { title: "Book One", genre: "Fiction", publish: 1981, edition: 2004 },
+  { title: "Book Two", genre: "Non-Fiction", publish: 1992, edition: 2008 },
+  { title: "Book Three", genre: "History", publish: 1999, edition: 2007 },
+  { title: "Book Four", genre: "Non-Fiction", publish: 1989, edition: 2010 },
+  { title: "Book Five", genre: "Science", publish: 2009, edition: 2014 },
+  { title: "Book Six", genre: "Fiction", publish: 1987, edition: 2010 },
+  { title: "Book Seven", genre: "History", publish: 1986, edition: 1996 },
+  { title: "Book Eight", genre: "Science", publish: 2011, edition: 2016 },
+  { title: "Book Nine", genre: "Non-Fiction", publish: 1981, edition: 1989 },
+];
+
+let userBooks = books.filter((bk) => bk.genre === 'History');
+console.log(userBooks);
+
 
 //aur agar hame forEach se return karvana hai to
 
-const num7 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-const newNum2 = []
-num7.forEach ( (num) => {
+const num7 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const newNum2 = [];
+num7.forEach((num) => {
   if (num > 4) {
-    newNum2.push(num)
+    newNum2.push(num);
   }
-})
+});
 console.log(newNum2);
 
 //Map's
 
-const mynums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const mynums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const newnums = mynums.map( (num) => num + 10 )
+const newnums = mynums.map((num) => num + 10);
 console.log(newnums);
 
-
-const mynum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const mynum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const newnum = mynum
-.map( (num) => num * 10)        //pahle 10 se multiply hoga
-.map( (num) => num + 1)         //fir os value's me 1+ hoga 
-.filter( (num) => num >= 40 )   //fir 40 se bade number print hoge
+  .map((num) => num * 10) //pahle 10 se multiply hoga
+  .map((num) => num + 1) //fir os value's me 1+ hoga
+  .filter((num) => num >= 40); //fir 40 se bade number print hoge
 console.log(newnum);
 
-switch (key) {
-  case value:
-    
-    break;
+const map = new Map();
+map.set("in", "india");
+map.set("usa", "americe");
+map.set("fr", "france");
 
-  default:
-    break;
+console.log(map);
+
+for (const key of map) {
+  console.log(key);
+}
+
+for (const [key, value] of map) {
+  console.log(key, ":-", value);
 }
