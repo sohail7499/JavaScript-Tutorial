@@ -180,7 +180,7 @@ const usersTwo = [
   { name: "Ali", age: 16 },
   { name: "Ahmed", age: 21 },
   { name: "Sara", age: 25 },
-  { name: "John", age: 15 },
+  { name: "sameer", age: 15 },
 ];
 
 const resultThree = usersTwo
