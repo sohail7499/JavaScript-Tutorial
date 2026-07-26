@@ -6,6 +6,7 @@ form.addEventListener("submit", (e) => {
   let bmi;
 
   const height = parseInt(document.getElementById("height").value);
+   // input ki value "("height").value" is tarah se li jaati hai
   const weight = parseInt(document.getElementById("weight").value);
   const result = document.getElementById("results");
 

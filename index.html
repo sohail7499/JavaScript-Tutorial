@@ -1,84 +1,87 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JAVASCRIPT-TUTORIAL</title>
-  </head>
-  <body style="background-color: #111111; color: white">
-    <div class="parent">
-      <div class="day">Monday</div>
-      <div class="day">Tuesday</div>
-      <div class="day">Wadnesday</div>
-      <div class="day">Thursday</div>
-    </div>
 
-    <ul class="language">
-      <li>JavaScript</li>
-    </ul>
-  </body>
-  <script>
-    const parent = document.querySelector(".parent");
-    console.log(parent);
-    // console.log(parent.children);
-    // console.log(parent.children[0]);
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JAVASCRIPT-TUTORIAL</title>
+</head>
 
-    parent.children[2].style.color = "green";
+<body style="background-color: #111111; color: white">
+  <ol class="parent">
+    <li class="day">Monday</li>
+    <li class="day">Tuesday</li>
+    <li class="day">Wadnesday</li>
+    <li class="day">Thursday</li>
+  </ol>
 
-    for (let i = 0; i < parent.children.length; i++) {
-      console.log(parent.children[i].innerHTML);
-    }
+  <div class="language">
+    <div>JavaScript</div>
+  </div>
+</body>
+<script>
+  const parent = document.querySelector(".parent");
+  console.log(parent);
+  console.log(parent.children);
+  // console.log(parent.children[0]);
 
-    const children = document.querySelector(".day");
-    // console.log(children);
-    // console.log(children.nextElementSibling);
-
-    /*========================================== add content whit js ===========================================*/
-
-    const h1 = document.createElement("h1");
-    console.log(h1);
-    h1.id = "heading";
-    h1.className = "mainHeadin";
-    h1.style.backgroundColor = "orange";
-    h1.style.padding = "12px";
-    h1.style.paddingLeft = "500px";
-
-    const addHeading = document.createTextNode("JavaScript basic");
-    h1.appendChild(addHeading);
-
-    document.body.appendChild(h1);
-
-    // EDIT AND ADD Element
-
-    function addLanguage(langName) {
-        const li = document.createElement("li")
-        li.innerHTML = `${langName}`
-        document.querySelector('.language').
-        appendChild(li)
-    }
-    addLanguage('python')
-    addLanguage('react')
-
-    function addOptiLanguage(optyLangName) {
-        const li = document.createElement('li')
-        li.appendChild(document.createTextNode(optyLangName))
-        document.querySelector('.language').
-        appendChild(li)
-    }
-    addOptiLanguage('typescript')
-    addOptiLanguage('Node.js')
-
-    //Edit 
-    const firstLang = document.querySelector('li:first-child')
-    firstLang.outerHTML = '<li>Tailwind</li>'
-
-    const secondlang = document.querySelector('li:nth-child(2)')
-    secondlang.innerHTML = 'HTML'
+  parent.children[0].style.color = 'red'
+  parent.style.backgroundColor = 'navy'
 
 
 
-    //remove
-    const lastLang = document.querySelector('li:nth-child(2)')
-    // lastLang.remove()
-  </script>
+
+  for (let i = 0; i < parent.children.length; i++) {
+    console.log(parent.children[i].innerHTML);
+    // innerHTML = element ke andar ka content nikalta hai!
+
+  }
+
+  const children = document.querySelector(".day");
+  // console.log(children);
+  // console.log(children.nextElementSibling);
+
+  /*========================================== add content whit js ===========================================*/
+
+  const h1 = document.createElement("h1");
+  console.log(h1);
+  h1.id = "heading";
+  h1.className = "mainHeadin";
+  h1.style.backgroundColor = "orange";
+  h1.style.padding = "12px";
+  h1.style.paddingLeft = "500px";
+
+  const addHeading = document.createTextNode('JavaScript Basic')
+  h1.appendChild(addHeading)
+  document.body.appendChild(h1)
+
+  // EDIT AND ADD Element
+
+  addLanguage = (LangName) => {
+    const li = document.createElement("li")
+    li.textContent = LangName
+    document.querySelector('.language').appendChild(li)
+  }
+  addLanguage('React')
+
+  function addNewLanguage(newLanguage) {
+    const li = document.createElement("li")
+    li.appendChild(document.createTextNode(newLanguage))
+    document.querySelector('.language').appendChild(li)
+  }
+  addNewLanguage('js')
+
+  //Edit 
+  const firstLang = document.querySelector('.language div:nth-child(1)')
+  firstLang.textContent = 'tailwind'
+
+
+
+
+
+  //remove
+  const lastLang = document.querySelector('li:nth-child(2)')
+  // lastLang.remove()
+</script>
+
 </html>

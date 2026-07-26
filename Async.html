@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async's</title>
+</head>
+
+<body style="background-color: #212121; color: aliceblue;">
+    <h1>color hex code</h1>
+    <!-- <button id="start">Start</button> -->
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function () {
+    //     // console.log('Hello');
+    // }, 2000)
+
+    // const changeText = function () {
+    //     document.querySelector('h1')
+    //         .textContent = 'Hello World!'
+    // }
+    // const stopChange = setTimeout(changeText, 2000)
+
+    // document.querySelector('#stop').addEventListener('click', () => {
+    //     clearTimeout(stopChange)
+    //     console.log('stoped');
+    // })
+    // ======================================================================
+    const randomColor = () => {
+        const hex = "0123456789ABCDEF"
+        let color = "#"
+
+        for (let i = 0; i < 6; i++) {
+            color += hex[Math.floor(Math.random() * hex.length)]
+        }
+        return color
+    }
+
+    let interval;
+
+    // document.querySelector('#start').addEventListener('click', () => {
+    //     interval = setInterval(() => {
+    //         document.body.style.backgroundColor = randomColor()
+    //         document.body.style.color = randomColor()
+    //     }, 1000)
+    // })
+
+    document.querySelector('#stop').addEventListener('click', () => {
+        clearInterval(interval)
+    })
+
+    interval = setInterval(() => {
+        const color = randomColor()
+        document.body.style.backgroundColor = color
+        document.querySelector('h1').textContent = color
+
+    }, 2000)
+</script>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event's</title>
+</head>
+
+<body>
+    <h1 id="heading">Hello World!</h1>
+    <button>Click Here!</button>
+
+    <input type="text" placeholder="Kuch type karo...">
+    <h1 id="output"></h1>
+</body>
+<script>
+    const h1 = document.querySelector('#heading')
+    const btn = document.querySelector('button')
+    const input = document.querySelector('input')
+    const output = document.querySelector('#output')
+
+    btn.addEventListener('click', function (e) {
+        h1.textContent = "Text Changed!"
+        console.log("btn ->", e.type, e.target, e.timeStamp);
+    })
+
+    h1.addEventListener('click', (e) => {
+        h1.textContent = "Again Text Changed"
+        console.log("h1 ->", e.type, e.target);
+    })
+
+    input.addEventListener('input', (e) => {
+        output.textContent = e.target.id
+        console.log(e.target.id);
+
+    })
+    document.addEventListener('mousemove', (e) => {
+    console.log(e.clientX, e.clientY)
+})
+</script>
+
+</html>
