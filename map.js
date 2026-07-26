@@ -143,7 +143,7 @@ console.log(student);
 // -------------------------------------------------------------
 
 // Question 3
-// Increase every product price by 10%.
+// Increase every product price by 10%
 
 const products = [
   { name: "Laptop", price: 50000 },
