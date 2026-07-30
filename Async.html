@@ -8,55 +8,186 @@
 </head>
 
 <body style="background-color: #212121; color: aliceblue;">
-    <h1>color hex code</h1>
-    <!-- <button id="start">Start</button> -->
+    <h1>Hello World!</h1>
+
+    <button id="start">Start</button>
     <button id="stop">Stop</button>
 </body>
 <script>
-    // setTimeout(function () {
-    //     // console.log('Hello');
-    // }, 2000)
+    const bg = setTimeout(() => {
+        document.body.style.background = "red";
+        console.log('hi');
+        
+    }, 3000);
+    clearTimeout(bg)
 
-    // const changeText = function () {
-    //     document.querySelector('h1')
-    //         .textContent = 'Hello World!'
-    // }
-    // const stopChange = setTimeout(changeText, 2000)
 
-    // document.querySelector('#stop').addEventListener('click', () => {
-    //     clearTimeout(stopChange)
-    //     console.log('stoped');
-    // })
-    // ======================================================================
-    const randomColor = () => {
-        const hex = "0123456789ABCDEF"
-        let color = "#"
 
-        for (let i = 0; i < 6; i++) {
-            color += hex[Math.floor(Math.random() * hex.length)]
-        }
-        return color
+    const saySohail = () => {
+        // console.log("Sohail");
+
     }
+    setTimeout(saySohail, 1000)
+    // console.log("done");
 
-    let interval;
+    const btn = document.getElementById('start')
+    btn.addEventListener('click', () => {
 
-    // document.querySelector('#start').addEventListener('click', () => {
-    //     interval = setInterval(() => {
-    //         document.body.style.backgroundColor = randomColor()
-    //         document.body.style.color = randomColor()
-    //     }, 1000)
-    // })
+        setTimeout(() => {
+            console.log("Welcome Sohail");
 
-    document.querySelector('#stop').addEventListener('click', () => {
-        clearInterval(interval)
+        }, 3000)
     })
 
-    interval = setInterval(() => {
-        const color = randomColor()
-        document.body.style.backgroundColor = color
-        document.querySelector('h1').textContent = color
 
-    }, 2000)
+    const changeText = function () {
+        document.querySelector('h1').textContent = "hello sohail"
+
+    }
+
+    const textTime = setTimeout(changeText, 3000)
+
+    document.getElementById('stop').addEventListener('click', function () {
+        clearTimeout(textTime)
+        console.log("STOPED!");
+
+    })
+
 </script>
 
 </html>
+
+// ==========================
+// setTimeout() Notes
+// ==========================
+
+// setTimeout() executes the callback ONLY ONCE
+// after the given delay (milliseconds).
+
+const bg = setTimeout(() => {
+    document.body.style.background = "red";
+    console.log("hi");
+}, 3000);
+
+// bg stores the TIMER ID, NOT the function.
+// clearTimeout() needs this timer ID to cancel the timer.
+
+clearTimeout(bg);
+
+// Since we cancelled immediately,
+// background will NEVER become red.
+// "hi" will NEVER print.
+
+
+// ==========================
+// Function Reference
+// ==========================
+
+const saySohail = () => {
+    // console.log("Sohail");
+}
+
+// IMPORTANT:
+// We pass the FUNCTION REFERENCE.
+// DON'T write saySohail()
+
+setTimeout(saySohail, 1000);
+
+// Wrong ❌
+// setTimeout(saySohail(),1000)
+
+
+// ==========================
+// Button Example
+// ==========================
+
+const btn = document.getElementById("start");
+
+btn.addEventListener("click", () => {
+
+    // Timer starts ONLY after clicking the button.
+
+    setTimeout(() => {
+        console.log("Welcome Sohail");
+    }, 3000);
+
+});
+
+
+// ==========================
+// Change Text Example
+// ==========================
+
+const changeText = function () {
+    document.querySelector("h1").textContent = "hello sohail";
+};
+
+// Store timer ID.
+const textTime = setTimeout(changeText, 3000);
+
+
+// ==========================
+// Stop Button
+// ==========================
+
+document.getElementById("stop").addEventListener("click", function () {
+
+    // clearTimeout() cancels ONLY
+    // if the timer has NOT executed yet.
+
+    clearTimeout(textTime);
+
+    console.log("STOPPED!");
+
+});
+
+
+// ======================================
+// GOLDEN RULES (Must Remember)
+// ======================================
+
+// 1.
+// setTimeout() runs ONLY ONE TIME.
+
+// 2.
+// Delay is always in milliseconds.
+// 1000 = 1 second.
+
+// 3.
+// Pass FUNCTION REFERENCE.
+// ✔ setTimeout(show,2000)
+// ✖ setTimeout(show(),2000)
+
+// 4.
+// setTimeout() returns a TIMER ID.
+
+// 5.
+// clearTimeout() accepts ONLY TIMER ID.
+
+// ✔
+const id = setTimeout(show,2000);
+clearTimeout(id);
+
+// ✖
+clearTimeout(show);
+
+// 6.
+// If timer already executed,
+// clearTimeout() does NOTHING.
+
+// 7.
+// Timeline
+
+// Create Timer
+//      ↓
+// Wait
+//      ↓
+// Execute Callback
+//
+// OR
+//
+// Create Timer
+//      ↓
+// clearTimeout()
+//      ↓
+// Callback NEVER runs. 
